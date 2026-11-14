@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SecTube — security learning resources that keep getting recommended</title>
+<style>
+  :root { color-scheme: dark; --bg:#0d1117; --panel:#161b22; --line:#30363d; --fg:#e6edf3; --dim:#9198a1; --acc:#3fb950; --link:#58a6ff; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.5 system-ui, sans-serif; }
+  main { max-width: 900px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font: 700 28px/1.2 ui-monospace, monospace; margin: 0 0 6px; }
+  h1 span { color: var(--acc); }
+  p.sub { color: var(--dim); margin: 0 0 20px; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .bar { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
+  .bar button { font:inherit; font-size:13px; padding:5px 11px; border-radius:999px; cursor:pointer;
+    background:var(--panel); color:var(--fg); border:1px solid var(--line); }
+  .bar button[aria-pressed=true] { background:var(--acc); border-color:var(--acc); color:#fff; font-weight:600; }
+  .bar button small { opacity:.7; }
+  .controls { display:flex; gap:8px; margin: 14px 0; }
+  .controls input, .controls select { font:inherit; padding:7px 10px; border-radius:6px;
+    background:var(--panel); color:var(--fg); border:1px solid var(--line); }
+  .controls input { flex:1; min-width:0; }
+  ol { list-style:none; margin:0; padding:0; }
+  li { display:grid; grid-template-columns: 36px 1fr auto; gap: 4px 12px; padding:14px 0; border-top:1px solid var(--line); }
+  .rank { color:var(--dim); font: 14px ui-monospace, monospace; padding-top:2px; }
+  .title { font-weight:600; font-size:16px; }
+  .tag { font-size:11px; padding:1px 7px; border:1px solid var(--line); border-radius:999px; color:var(--dim); margin-left:6px; white-space:nowrap; }
+  .desc { margin:2px 0 4px; }
+  .meta { color:var(--dim); font-size:13px; }
+  .meta b { color:var(--acc); }
+  .spark { display:flex; align-items:flex-end; gap:2px; height:36px; align-self:center; }
+  .spark i { width:5px; background:var(--acc); min-height:1px; opacity:.85; }
+  .spark i.z { background:var(--line); }
+  footer { color:var(--dim); font-size:13px; margin-top:32px; border-top:1px solid var(--line); padding-top:16px; }
+  @media (max-width:600px) { .spark { display:none; } li { grid-template-columns: 30px 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Sec<span>Tube</span></h1>
+  <p class="sub">Courses, labs, CTFs, books and tools for learning security, ranked by how often Hacker News and Stack Exchange have brought them up, year after year.</p>
+
+  <div class="bar" id="cats" role="group" aria-label="Domain"></div>
+  <div class="bar" id="types" role="group" aria-label="Resource type"></div>
+  <div class="controls">
+    <input id="q" type="search" placeholder="Filter by name or description…" aria-label="Filter">
+    <select id="sort" aria-label="Sort">
+      <option value="mentions">Most mentioned</option>
+      <option value="years">Most years active</option>
+      <option value="recent">Most mentioned since 2023</option>
+    </select>
+  </div>
+  <ol id="list"></ol>
+  <footer id="foot"></footer>
+</main>
+
+<script src="data.js"></script>
+<script>
+const D = window.DATA, items = D.items;
+const el = (tag, props = {}, ...kids) => { const e = Object.assign(document.createElement(tag), props); e.append(...kids); return e; };
+const CATS = ["All", "Cryptography", "Web Pentest", "Active Directory", "Malware Analysis", "Reverse Engineering", "Cloud & DevSecOps", "Foundations & CTFs"];
+const TYPES = ["All", "Lab", "Course", "Book", "Reading", "Video", "Repo", "Tool"];
+const THIS_YEAR = Math.max(...items.flatMap(it => Object.keys(it.years).map(Number)));
+const recent = it => Object.entries(it.years).reduce((s, [y, n]) => s + (y >= 2023 ? n : 0), 0);
+const state = { cat: "All", type: "All", q: "", sort: "mentions" };
+
+function bar(id, values, key) {
+  const box = document.getElementById(id);
+  for (const v of values) {
+    const n = v === "All" ? "" : items.filter(it => it[key] === v).length;
+    const b = el("button", { type: "button", onclick() { state[key] = v; render(); } }, v + " ", el("small", {}, String(n)));
+    b.dataset.v = v;
+    box.append(b);
+  }
+}
+
+function spark(it) {
+  const max = Math.max(...Object.values(it.years));
+  const box = el("div", { className: "spark", title: `HN mentions per year, 2010–${THIS_YEAR}` });
+  for (let y = 2010; y <= THIS_YEAR; y++) {
+    const n = it.years[y] || 0;
+    const bar = el("i", { title: `${y}: ${n}`, className: n ? "" : "z" });
+    bar.style.height = (n ? Math.max(4, 100 * n / max) : 3) + "%";
+    box.append(bar);
+  }
+  return box;
+}
+
+function render() {
+  for (const [id, key] of [["cats", "cat"], ["types", "type"]])
+    for (const b of document.getElementById(id).children) b.setAttribute("aria-pressed", b.dataset.v === state[key]);
+  const q = state.q.toLowerCase();
+  const by = { mentions: it => it.mentions, years: it => it.allYears.length * 1e6 + it.mentions, recent }[state.sort];
+  const rows = items
+    .filter(it => (state.cat === "All" || it.cat === state.cat) && (state.type === "All" || it.type === state.type)
+      && (!q || (it.name + " " + it.desc).toLowerCase().includes(q)))
+    .sort((a, b) => by(b) - by(a));
+  const list = document.getElementById("list");
+  list.replaceChildren(...rows.map((it, i) => {
+    const ys = it.allYears;
+    const hn = "https://hn.algolia.com/?type=comment&query=" + encodeURIComponent(it.q);
+    const meta = el("div", { className: "meta" },
+      el("b", {}, it.mentions.toLocaleString()), " mentions",
+      ` (HN: ${it.comments.toLocaleString()} comments, ${it.stories.toLocaleString()} stories · Stack Exchange: ${it.se.toLocaleString()} posts) · ${ys.length} years, ${Math.min(...ys)}–${Math.max(...ys)} · `,
+      el("a", { href: hn, target: "_blank", rel: "noopener" }, "HN"), " · ",
+      el("a", { href: "https://security.stackexchange.com/search?q=" + encodeURIComponent(it.q), target: "_blank", rel: "noopener" }, "SE"));
+    if (it.top && it.top.points)
+      meta.append(el("br"), "Top thread: ",
+        el("a", { href: "https://news.ycombinator.com/item?id=" + it.top.id, target: "_blank", rel: "noopener" }, it.top.title),
+        ` (${it.top.points} points)`);
+    return el("li", {},
+      el("span", { className: "rank" }, String(i + 1)),
+      el("div", {},
+        el("a", { className: "title", href: it.url, target: "_blank", rel: "noopener" }, it.name),
+        el("span", { className: "tag" }, it.type), state.cat === "All" ? el("span", { className: "tag" }, it.cat) : "",
+        el("div", { className: "desc" }, it.desc), meta),
+      spark(it));
+  }));
+  if (!rows.length) list.append(el("li", {}, "", "Nothing matches."));
+}
+
+bar("cats", CATS, "cat"); bar("types", TYPES, "type");
+document.getElementById("q").oninput = e => { state.q = e.target.value; render(); };
+document.getElementById("sort").onchange = e => { state.sort = e.target.value; render(); };
+document.getElementById("foot").append(
+  `How this is built: ${D.candidates} hand-picked candidates were searched on Hacker News (Algolia API) and on Stack Exchange (Information Security, plus Cryptography and Reverse Engineering for those domains) on ${D.generated}. `
+  + `A resource is listed only if it has at least ${D.minMentions} mentions spread over at least ${D.minYears} different years (${items.length} qualified). `
+  + `Counts are HN comments containing the resource's name or URL, HN stories with it in the title or URL, and Stack Exchange questions and answers containing it. A mention is not always a recommendation, `
+  + `so every row links to the underlying posts. HN counts for very common names (over 1,000 hits) are lower bounds. The bar charts show HN only. Re-run mine.py to refresh.`);
+render();
+</script>
+</body>
+</html>
