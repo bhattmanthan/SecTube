@@ -71,8 +71,7 @@ const state = { cat: "All", type: "All", q: "", sort: "mentions" };
 function bar(id, values, key) {
   const box = document.getElementById(id);
   for (const v of values) {
-    const n = v === "All" ? "" : items.filter(it => it[key] === v).length;
-    const b = el("button", { type: "button", onclick() { state[key] = v; render(); } }, v + " ", el("small", {}, String(n)));
+    const b = el("button", { type: "button", onclick() { state[key] = v; render(); } }, v + " ", el("small"));
     b.dataset.v = v;
     box.append(b);
   }
@@ -91,13 +90,18 @@ function spark(it) {
 }
 
 function render() {
-  for (const [id, key] of [["cats", "cat"], ["types", "type"]])
-    for (const b of document.getElementById(id).children) b.setAttribute("aria-pressed", b.dataset.v === state[key]);
   const q = state.q.toLowerCase();
+  const hit = (it, cat, type) => (cat === "All" || it.cat === cat) && (type === "All" || it.type === type)
+    && (!q || (it.name + " " + it.desc).toLowerCase().includes(q));
+  // each chip counts what you'd get by clicking it, given the other filter and the search box
+  for (const [id, key] of [["cats", "cat"], ["types", "type"]])
+    for (const b of document.getElementById(id).children) {
+      b.setAttribute("aria-pressed", b.dataset.v === state[key]);
+      b.lastChild.textContent = items.filter(it => key === "cat" ? hit(it, b.dataset.v, state.type) : hit(it, state.cat, b.dataset.v)).length;
+    }
   const by = { mentions: it => it.mentions, years: it => it.allYears.length * 1e6 + it.mentions, recent }[state.sort];
   const rows = items
-    .filter(it => (state.cat === "All" || it.cat === state.cat) && (state.type === "All" || it.type === state.type)
-      && (!q || (it.name + " " + it.desc).toLowerCase().includes(q)))
+    .filter(it => hit(it, state.cat, state.type))
     .sort((a, b) => by(b) - by(a));
   const list = document.getElementById("list");
   list.replaceChildren(...rows.map((it, i) => {
