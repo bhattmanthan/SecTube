@@ -8,7 +8,7 @@
   :root { color-scheme: dark; --bg:#0d1117; --panel:#161b22; --line:#30363d; --fg:#e6edf3; --dim:#9198a1; --acc:#3fb950; --link:#58a6ff; }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.5 system-ui, sans-serif; }
-  main { max-width: 900px; margin: 0 auto; padding: 24px 16px 64px; }
+  main { max-width: 1800px; margin: 0 auto; padding: 24px clamp(16px, 3vw, 48px) 64px; }
   h1 { font: 700 28px/1.2 ui-monospace, monospace; margin: 0 0 6px; }
   h1 span { color: var(--acc); }
   p.sub { color: var(--dim); margin: 0 0 20px; }
@@ -23,8 +23,8 @@
   .controls input, .controls select { font:inherit; padding:7px 10px; border-radius:6px;
     background:var(--panel); color:var(--fg); border:1px solid var(--line); }
   .controls input { flex:1; min-width:0; }
-  ol { list-style:none; margin:0; padding:0; }
-  li { display:grid; grid-template-columns: 36px 1fr auto; gap: 4px 12px; padding:14px 0; border-top:1px solid var(--line); }
+  ol { list-style:none; margin:0; padding:0; display:grid; grid-template-columns: repeat(auto-fill, minmax(min(560px, 100%), 1fr)); column-gap:48px; }
+  li { min-width:0; overflow-wrap:anywhere; display:grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: 4px 12px; padding:14px 0; border-top:1px solid var(--line); }
   .rank { color:var(--dim); font: 14px ui-monospace, monospace; padding-top:2px; }
   .title { font-weight:600; font-size:16px; }
   .tag { font-size:11px; padding:1px 7px; border:1px solid var(--line); border-radius:999px; color:var(--dim); margin-left:6px; white-space:nowrap; }
@@ -36,7 +36,7 @@
   .spark i { width:5px; background:var(--acc); min-height:1px; opacity:.85; }
   .spark i.z { background:var(--line); }
   footer { color:var(--dim); font-size:13px; margin-top:32px; border-top:1px solid var(--line); padding-top:16px; }
-  @media (max-width:600px) { .spark { display:none; } li { grid-template-columns: 30px 1fr; } }
+  @media (max-width:600px) { .spark { display:none; } .controls { flex-direction:column; } li { grid-template-columns: 30px minmax(0, 1fr); } }
 </style>
 </head>
 <body>
