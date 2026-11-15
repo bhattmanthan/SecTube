@@ -2,7 +2,7 @@ window.DATA = {
  "generated": "2026-11-15",
  "minMentions": 5,
  "minYears": 3,
- "candidates": 168,
+ "candidates": 178,
  "items": [
   {
    "cat": "Foundations & CTFs",
@@ -59,7 +59,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -118,7 +119,8 @@ window.DATA = {
     "id": "9651197",
     "title": "Sourceforge Hijacks the Nmap Sourceforge Account",
     "points": 484
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -155,7 +157,8 @@ window.DATA = {
     "id": "19315273",
     "title": "Ghidra, NSA's reverse-engineering tool",
     "points": 1283
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -212,7 +215,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -269,7 +273,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -322,7 +327,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -371,7 +377,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -420,7 +427,8 @@ window.DATA = {
     "id": "35156764",
     "title": "Kali Linux 2023.1 introduces 'Purple' distro for defensive security",
     "points": 380
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -471,7 +479,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -515,7 +524,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -560,7 +570,8 @@ window.DATA = {
     "id": "18602067",
     "title": "Hashicorp Vault v1.0",
     "points": 409
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -621,7 +632,8 @@ window.DATA = {
     "id": "18378332",
     "title": "Microsoft Releases a Linux Version of the ProcDump Sysinternals Tool",
     "points": 455
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -676,7 +688,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -721,7 +734,8 @@ window.DATA = {
     "id": "16065845",
     "title": "Reading privileged memory with a side-channel",
     "points": 2334
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -780,7 +794,8 @@ window.DATA = {
     "id": "28467397",
     "title": "OWASP Top 10 2021",
     "points": 360
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -833,7 +848,8 @@ window.DATA = {
     "id": "18052923",
     "title": "Why I\u2019m done with Chrome",
     "points": 2357
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -888,7 +904,8 @@ window.DATA = {
     "id": "4203062",
     "title": "Sqlmap: Automatic SQL injection and database takeover tool",
     "points": 248
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -933,7 +950,8 @@ window.DATA = {
     "id": "14596613",
     "title": "How to use BeyondCorp to ditch VPN, improve security and go to the cloud",
     "points": 441
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -968,7 +986,8 @@ window.DATA = {
     "id": "42784892",
     "title": "Sigstore: Making sure your software is what it claims to be",
     "points": 119
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -1013,7 +1032,8 @@ window.DATA = {
     "id": "8092273",
     "title": "X64_dbg: An open-source x64/x86 debugger for Windows",
     "points": 133
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -1062,7 +1082,8 @@ window.DATA = {
     "id": "8166064",
     "title": "The Matasano Crypto Challenges",
     "points": 404
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -1098,7 +1119,8 @@ window.DATA = {
     "id": "48709670",
     "title": "GLM 5.2 beats Claude in our benchmarks",
     "points": 1113
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -1157,7 +1179,8 @@ window.DATA = {
     "id": "28758486",
     "title": "Phrack Issue 70",
     "points": 717
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -1192,7 +1215,8 @@ window.DATA = {
     "id": "37739376",
     "title": "Return to Office Is Bullshit and Everyone Knows It",
     "points": 926
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -1241,7 +1265,8 @@ window.DATA = {
     "id": "15663010",
     "title": "He Perfected a Password-Hacking Tool\u2013Then the Russians Came Calling",
     "points": 3
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -1289,7 +1314,8 @@ window.DATA = {
     "id": "11796620",
     "title": "Microcorruption \u2013 Embedded Security CTF",
     "points": 77
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -1334,7 +1360,8 @@ window.DATA = {
     "id": "12240209",
     "title": "Binary Ninja \u2013 A new kind of reversing platform",
     "points": 109
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -1371,7 +1398,8 @@ window.DATA = {
     "id": "47475888",
     "title": "Trivy under attack again: Widespread GitHub Actions tag compromise secrets",
     "points": 250
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -1414,7 +1442,8 @@ window.DATA = {
     "id": "13056254",
     "title": "CyberChef \u2013 A Cyber Swiss Army Knife",
     "points": 785
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -1459,7 +1488,8 @@ window.DATA = {
     "id": "20123120",
     "title": "Hack the Box \u2013 Pentesting Labs for Free",
     "points": 127
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -1515,7 +1545,8 @@ window.DATA = {
     "id": "38680950",
     "title": "Handbook of Applied Cryptography",
     "points": 193
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -1560,7 +1591,8 @@ window.DATA = {
     "id": "26446337",
     "title": "Docker Security Cheat Sheet",
     "points": 325
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -1601,7 +1633,8 @@ window.DATA = {
     "id": "17121020",
     "title": "Opa \u2013 An open-source, general-purpose policy engine",
     "points": 157
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -1652,7 +1685,8 @@ window.DATA = {
     "id": "30362429",
     "title": "The ZAPCon 2022 schedule is now live",
     "points": 30
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -1707,7 +1741,8 @@ window.DATA = {
     "id": "28725588",
     "title": "WebGoat is a deliberately insecure application",
     "points": 114
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -1755,7 +1790,8 @@ window.DATA = {
     "id": "37167052",
     "title": "Someone reported a security issue for DVWA",
     "points": 1
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -1796,7 +1832,8 @@ window.DATA = {
     "id": "42716072",
     "title": "dnSpyEx: .NET debugger and assembly editor",
     "points": 208
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -1839,7 +1876,8 @@ window.DATA = {
     "id": "19891471",
     "title": "The Origin of \u2018Script Kiddie\u2019",
     "points": 152
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -1874,7 +1912,8 @@ window.DATA = {
     "id": "40828493",
     "title": "Imhex: A hex editor for reverse engineers",
     "points": 634
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -1913,7 +1952,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -1968,7 +2008,8 @@ window.DATA = {
     "id": "37281745",
     "title": "Overthewire.org",
     "points": 326
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -2024,7 +2065,8 @@ window.DATA = {
     "id": "25889603",
     "title": "Smashing the Stack for Fun and Profit (1996)",
     "points": 181
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -2057,7 +2099,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -2103,7 +2146,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -2143,7 +2187,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -2183,7 +2228,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -2228,7 +2274,8 @@ window.DATA = {
     "id": "23031628",
     "title": "Mozilla SOPS with KMS and Git is underrated (2019)",
     "points": 166
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -2275,7 +2322,8 @@ window.DATA = {
     "id": "41422202",
     "title": "Serious Cryptography (2nd Edition)",
     "points": 8
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -2322,7 +2370,8 @@ window.DATA = {
     2022,
     2023
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -2371,7 +2420,8 @@ window.DATA = {
     "id": "21328923",
     "title": "YARA \u2013 A pattern-matching Swiss knife for malware researchers",
     "points": 101
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -2418,7 +2468,8 @@ window.DATA = {
     "id": "7033792",
     "title": "Inject JavaScript to explore native apps on Windows, Mac, Linux and iOS",
     "points": 178
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -2473,7 +2524,8 @@ window.DATA = {
     "id": "1113641",
     "title": "Schneier has a new book coming out - Cryptography Engineering",
     "points": 58
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -2512,7 +2564,8 @@ window.DATA = {
     "id": "37392576",
     "title": "The Cyber Security Glossary",
     "points": 41
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -2553,7 +2606,8 @@ window.DATA = {
     "id": "30910893",
     "title": "TruffleHog v3 \u2013 Detect and automatically verify over 600 credential types",
     "points": 84
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -2604,7 +2658,8 @@ window.DATA = {
     "id": "5694003",
     "title": "Learn Web Penetration Testing The Right Way",
     "points": 151
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -2643,7 +2698,8 @@ window.DATA = {
     "id": "25120236",
     "title": "Cutter \u2013 Free and Open Source Re Platform Powered by Radare2",
     "points": 249
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -2698,7 +2754,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -2735,7 +2792,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -2784,7 +2842,8 @@ window.DATA = {
     "id": "21640669",
     "title": "Reverse Engineering for Beginners [pdf]",
     "points": 451
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -2827,7 +2886,8 @@ window.DATA = {
     "id": "13141446",
     "title": "SELinux, Seccomp, Falco, and You: A Technical Discussion",
     "points": 85
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -2874,7 +2934,8 @@ window.DATA = {
     "id": "13089489",
     "title": "Crypto 101 \u2013 Introductory course on cryptography",
     "points": 919
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -2923,7 +2984,8 @@ window.DATA = {
     "id": "14330547",
     "title": "Accidentally Stopping a Global Cyber Attack",
     "points": 1981
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -2967,7 +3029,8 @@ window.DATA = {
     2024,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -3021,7 +3084,8 @@ window.DATA = {
     "id": "16748400",
     "title": "Cryptographic Right Answers",
     "points": 340
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -3074,7 +3138,8 @@ window.DATA = {
     "id": "6144024",
     "title": "Coolest robots.txt ever",
     "points": 8
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -3120,7 +3185,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -3165,7 +3231,8 @@ window.DATA = {
     "id": "8111318",
     "title": "Pwntools \u2013 CTF Framework",
     "points": 36
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -3200,7 +3267,8 @@ window.DATA = {
     "id": "26603259",
     "title": "OAuth 2.0 Authentication Vulnerabilities",
     "points": 174
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -3233,7 +3301,8 @@ window.DATA = {
     "id": "31854809",
     "title": "Supply chain Levels for Software Artifacts (SLSA)",
     "points": 4
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -3271,7 +3340,8 @@ window.DATA = {
     "id": "17920272",
     "title": "Cuckoo: Open Source automated malware analysis system",
     "points": 12
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -3324,7 +3394,8 @@ window.DATA = {
     "id": "6695709",
     "title": "Hacking: The Art of Exploitation, 2nd Edition, Jon Erickson",
     "points": 1
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -3373,7 +3444,8 @@ window.DATA = {
     "id": "25369208",
     "title": "Open Security Training: open license training material for computer security",
     "points": 152
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -3412,7 +3484,8 @@ window.DATA = {
     "id": "17163251",
     "title": "The Importance of Deep Work and the 30-Hour Method for Learning a New Skill",
     "points": 1331
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -3451,7 +3524,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -3500,7 +3574,8 @@ window.DATA = {
     "id": "30831763",
     "title": "Supply chain risks in Terraform and how to prevent them with Checkov",
     "points": 4
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -3549,7 +3624,8 @@ window.DATA = {
     "id": "46663507",
     "title": "Computer Systems Security 6.566 / Spring 2024",
     "points": 123
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -3586,7 +3662,8 @@ window.DATA = {
     "id": "28180252",
     "title": "CryptoHack \u2013 A fun free platform for learning cryptography",
     "points": 52
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -3623,7 +3700,8 @@ window.DATA = {
     "id": "30810854",
     "title": "Real World Cryptography \u2013 David Wong",
     "points": 5
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -3670,7 +3748,8 @@ window.DATA = {
     "id": "28464837",
     "title": "PicoCTF",
     "points": 27
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -3713,7 +3792,8 @@ window.DATA = {
     "id": "3255415",
     "title": "New Stanford class on Cryptography",
     "points": 238
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -3757,7 +3837,8 @@ window.DATA = {
     "id": "11756282",
     "title": "Practical Malware Analysis Starter Kit",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -3796,7 +3877,8 @@ window.DATA = {
     "id": "25038422",
     "title": "AWS Security Maturity Roadmap [pdf]",
     "points": 78
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -3839,7 +3921,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -3880,7 +3963,8 @@ window.DATA = {
     "id": "22013751",
     "title": "A Graduate Course in Applied Cryptography",
     "points": 466
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -3917,7 +4001,8 @@ window.DATA = {
     "id": "18200749",
     "title": "Every Byte of a TLS Connection Explained and Reproduced",
     "points": 1185
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -3962,7 +4047,8 @@ window.DATA = {
     "id": "23211961",
     "title": "Web Application Exploits and Defenses",
     "points": 91
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -4017,7 +4103,8 @@ window.DATA = {
     "id": "8339955",
     "title": "OWASP Testing Guide 2014",
     "points": 63
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -4057,7 +4144,8 @@ window.DATA = {
     "id": "34485119",
     "title": "OWASP Juice Shop",
     "points": 144
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -4096,7 +4184,8 @@ window.DATA = {
     "id": "3239460",
     "title": "Michal Zalewski's new web app security book, \"The Tangled Web\", available now",
     "points": 4
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -4131,7 +4220,8 @@ window.DATA = {
     "id": "50387796",
     "title": "Pwn.college",
     "points": 339
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -4176,7 +4266,8 @@ window.DATA = {
     "id": "31449237",
     "title": "Impacket \u2013 collection of Python classes for working with network protocols",
     "points": 47
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -4211,7 +4302,8 @@ window.DATA = {
     "id": "19786054",
     "title": "Learning Web Security via IppSec doing Hack the Box (Teacher)",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -4260,7 +4352,8 @@ window.DATA = {
     "id": "47110781",
     "title": "Volatility: The volatile memory forensic extraction framework",
     "points": 39
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -4307,7 +4400,8 @@ window.DATA = {
     "id": "9282079",
     "title": "Exploit Exercises",
     "points": 245
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -4348,7 +4442,8 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -4386,7 +4481,8 @@ window.DATA = {
     "id": "30708854",
     "title": "Crackmes",
     "points": 4
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -4419,7 +4515,8 @@ window.DATA = {
     "id": "25444866",
     "title": "Risk8s Business: Risk Analysis of Kubernetes Clusters",
     "points": 9
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -4450,7 +4547,8 @@ window.DATA = {
     "id": "11256364",
     "title": "Show HN: Security Training for Developers",
     "points": 128
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -4493,7 +4591,8 @@ window.DATA = {
     "id": "10060209",
     "title": "Angr \u2013 A framework for analyzing binaries",
     "points": 38
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -4524,7 +4623,8 @@ window.DATA = {
     2022,
     2025
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -4562,7 +4662,8 @@ window.DATA = {
     "id": "1504703",
     "title": "REMnux: A Linux Distribution for Reverse-Engineering Malware",
     "points": 15
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -4601,7 +4702,8 @@ window.DATA = {
     "id": "14286633",
     "title": "Pwnable.kr \u2013 a site providing various challenges regarding system exploitation",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -4636,7 +4738,8 @@ window.DATA = {
     "id": "21428786",
     "title": "Security Scanner for Terraform 0.12: Supports AWS, Azure and GCP",
     "points": 3
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -4670,7 +4773,8 @@ window.DATA = {
     "id": "14828569",
     "title": "Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in rogue auth server",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -4709,7 +4813,8 @@ window.DATA = {
     "id": "23352856",
     "title": "Designing an Authentication System: A Dialogue in Four Scenes (1988)",
     "points": 94
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -4740,7 +4845,8 @@ window.DATA = {
     "id": "22815453",
     "title": "New Google SRE book: Building Secure and Reliable Systems",
     "points": 1429
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -4769,7 +4875,8 @@ window.DATA = {
     "id": "7815237",
     "title": "Google's XSS game",
     "points": 376
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -4809,7 +4916,8 @@ window.DATA = {
     "id": "23262873",
     "title": "ScoutSuite: Multi-cloud security auditing tool",
     "points": 89
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -4840,7 +4948,8 @@ window.DATA = {
     "id": "36937726",
     "title": "Special HTTP Headers \u2013 HackTricks",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -4879,7 +4988,8 @@ window.DATA = {
     "id": "29314848",
     "title": "The Joy of Cryptography",
     "points": 431
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -4912,7 +5022,8 @@ window.DATA = {
     "id": "16046608",
     "title": "Attacking Read-Only Domain Controllers (RODCs) to Own Active Directory",
     "points": 4
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -4945,7 +5056,8 @@ window.DATA = {
     "id": "10775285",
     "title": "2015 SANS Holiday Hack Challenge",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -4980,7 +5092,8 @@ window.DATA = {
     "id": "21306713",
     "title": "A list of useful payloads and bypasses for Web Application Security",
     "points": 3
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -5014,7 +5127,8 @@ window.DATA = {
     "id": "26165767",
     "title": "MacHound: BloodhoundAD Data Collection for macOS",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -5045,7 +5159,8 @@ window.DATA = {
     "id": "16250829",
     "title": "Hacker101: A free class for web security",
     "points": 159
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -5082,7 +5197,8 @@ window.DATA = {
     "id": "22676126",
     "title": "Stanford CS253: Web Security",
     "points": 153
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -5117,7 +5233,8 @@ window.DATA = {
     "id": "22559786",
     "title": "The SOC2 Starting Seven",
     "points": 109
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -5154,7 +5271,8 @@ window.DATA = {
     "id": "19786341",
     "title": "Infrastructure Configuration Scanner for AWS",
     "points": 6
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -5191,7 +5309,8 @@ window.DATA = {
     "id": "7776962",
     "title": "CTF Field Guide",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -5226,7 +5345,8 @@ window.DATA = {
     "id": "26558074",
     "title": "Practical Cryptography for Developers",
     "points": 153
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -5257,7 +5377,8 @@ window.DATA = {
     2022,
     2025
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -5293,7 +5414,8 @@ window.DATA = {
     2023,
     2024
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Cryptography",
@@ -5330,7 +5452,8 @@ window.DATA = {
     "id": "7876246",
     "title": "Ask HN: Thoughts on Understanding Cryptography by Paar/Pelzl?",
     "points": 1
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -5361,7 +5484,8 @@ window.DATA = {
     "id": "11687479",
     "title": "Building an EmPyre with Python",
     "points": 3
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -5397,7 +5521,8 @@ window.DATA = {
     "id": "23818076",
     "title": "Malware adds Any.Run sandbox detection to evade analysis",
     "points": 3
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -5432,7 +5557,8 @@ window.DATA = {
     "id": "41616100",
     "title": "GEF \u2013 GDB Enhanced Features",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -5466,7 +5592,8 @@ window.DATA = {
     "id": "9312234",
     "title": "A Course on Modern Binary Exploitation",
     "points": 59
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -5498,7 +5625,8 @@ window.DATA = {
     2024,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -5529,7 +5657,8 @@ window.DATA = {
     "id": "45282497",
     "title": "One Token to rule them all \u2013 Obtaining Global Admin in every Entra ID tenant",
     "points": 331
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -5558,7 +5687,8 @@ window.DATA = {
     "id": "16089713",
     "title": "ROP Emporium: Learn return-oriented programming through a series of challenges",
     "points": 140
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -5590,7 +5720,8 @@ window.DATA = {
     "id": "8077068",
     "title": "The Flare-On Challenge",
     "points": 18
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -5619,7 +5750,8 @@ window.DATA = {
     "id": "23562066",
     "title": "Kubernetes Goat",
     "points": 4
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Foundations & CTFs",
@@ -5647,7 +5779,8 @@ window.DATA = {
     2023,
     2025
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -5681,7 +5814,8 @@ window.DATA = {
     "id": "43556029",
     "title": "Practical Binary Analysis",
     "points": 14
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -5714,7 +5848,8 @@ window.DATA = {
     "id": "26656266",
     "title": "FlAWS: You'll learn about common mistakes and gotchas when using AWS",
     "points": 48
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -5750,7 +5885,8 @@ window.DATA = {
     "id": "5391048",
     "title": "Natas: Web Security Wargame",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -5783,7 +5919,8 @@ window.DATA = {
     2023,
     2024
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -5814,7 +5951,8 @@ window.DATA = {
     "id": "24570299",
     "title": "MalwareBazaar \u2013 Malware Sample Exchange",
     "points": 84
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Reverse Engineering",
@@ -5847,7 +5985,8 @@ window.DATA = {
     "id": "22582269",
     "title": "Nightmare \u2013 Guided Intro to Binary Exploitation/Reverse Engineering",
     "points": 246
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -5878,7 +6017,8 @@ window.DATA = {
     "id": "19062358",
     "title": "Kube-bench: checks deployment according to security best practices",
     "points": 3
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -5911,7 +6051,8 @@ window.DATA = {
     "id": "32119174",
     "title": "Attacking Active Directory: 0 to 0.9",
     "points": 1
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -5940,7 +6081,8 @@ window.DATA = {
     "id": "30054350",
     "title": "Flare VM \u2013 a Windows-based security distribution for malware analysis",
     "points": 4
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -5969,7 +6111,8 @@ window.DATA = {
     "id": "9635305",
     "title": "Web Hacking 101 [pdf]",
     "points": 111
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Web Pentest",
@@ -6000,7 +6143,8 @@ window.DATA = {
     "id": "25845045",
     "title": "Nuclei \u2013 http vulnerability scanning based on templates",
     "points": 1
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -6030,7 +6174,8 @@ window.DATA = {
     "id": "18740582",
     "title": "Show HN: Cross-platform 2D game engine for beginners written in C++",
     "points": 8
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -6054,7 +6199,8 @@ window.DATA = {
     2016,
     2017
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -6083,7 +6229,8 @@ window.DATA = {
     "id": "30014478",
     "title": "Reverse Engineering 101",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -6116,7 +6263,8 @@ window.DATA = {
     "id": "14345382",
     "title": "Ytisf/theZoo: A repository of Live malwares for your own joy and pleasure",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -6143,7 +6291,8 @@ window.DATA = {
     "id": "40197560",
     "title": "CloudGoat",
     "points": 101
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -6170,7 +6319,8 @@ window.DATA = {
     "id": "19408866",
     "title": "List of AWS Security Tools",
     "points": 18
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -6199,7 +6349,8 @@ window.DATA = {
     "id": "17813518",
     "title": "Pacu: The Open Source AWS Exploitation Framework",
     "points": 2
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Cloud & DevSecOps",
@@ -6224,7 +6375,8 @@ window.DATA = {
     2024,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
   },
   {
    "cat": "Active Directory",
@@ -6252,7 +6404,8 @@ window.DATA = {
     "id": "25591551",
     "title": "PingCastle \u2013 Get Active Directory Security at 80% in 20% of the time",
     "points": 1
-   }
+   },
+   "pick": false
   },
   {
    "cat": "Malware Analysis",
@@ -6277,7 +6430,225 @@ window.DATA = {
     2025,
     2026
    ],
-   "top": null
+   "top": null,
+   "pick": false
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Video",
+   "name": "Six Degrees of Domain Admin (DEF CON 24)",
+   "url": "https://www.youtube.com/watch?v=wP8ZCczC1OU",
+   "desc": "Andy Robbins, Rohan Vazarkar and Will Schroeder introduce BloodHound and attack-path analysis.",
+   "q": "\"Six Degrees of Domain Admin\"",
+   "comments": 0,
+   "stories": 1,
+   "se": 1,
+   "mentions": 2,
+   "years": {
+    "2017": 1
+   },
+   "allYears": [
+    2017,
+    2019
+   ],
+   "top": {
+    "id": "14894901",
+    "title": "Bloodhound: Six Degrees of Domain Admin",
+    "points": 1
+   },
+   "pick": true
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Lab",
+   "name": "GOAD (Game of Active Directory)",
+   "url": "https://github.com/Orange-Cyberdefense/GOAD",
+   "desc": "Vulnerable multi-domain Active Directory lab you deploy yourself.",
+   "q": "\"Orange-Cyberdefense/GOAD\"",
+   "comments": 0,
+   "stories": 1,
+   "se": 0,
+   "mentions": 1,
+   "years": {
+    "2022": 1
+   },
+   "allYears": [
+    2022
+   ],
+   "top": {
+    "id": "32002835",
+    "title": "Game of Active Directory v2",
+    "points": 1
+   },
+   "pick": true
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Lab",
+   "name": "Vulnerable-AD",
+   "url": "https://github.com/safebuffer/vulnerable-AD",
+   "desc": "Script that makes a test domain controller vulnerable to common AD attacks.",
+   "q": "\"vulnerable-AD\"",
+   "comments": 1,
+   "stories": 0,
+   "se": 0,
+   "mentions": 1,
+   "years": {
+    "2024": 1
+   },
+   "allYears": [
+    2024
+   ],
+   "top": null,
+   "pick": true
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Lab",
+   "name": "Splunk Attack Range",
+   "url": "https://github.com/splunk/attack_range",
+   "desc": "Builds an instrumented lab, including a Windows domain controller, for simulating attacks and developing detections.",
+   "q": "\"Splunk Attack Range\"",
+   "comments": 1,
+   "stories": 0,
+   "se": 0,
+   "mentions": 1,
+   "years": {
+    "2020": 1
+   },
+   "allYears": [
+    2020
+   ],
+   "top": null,
+   "pick": true
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Lab",
+   "name": "Hack Smarter Labs",
+   "url": "https://www.hacksmarter.org/catalog",
+   "desc": "Tyler Ramsbey's hands-on hacking labs, including free Active Directory challenge labs.",
+   "q": "\"hacksmarter\"",
+   "comments": 0,
+   "stories": 0,
+   "se": 0,
+   "mentions": 0,
+   "years": {},
+   "allYears": [],
+   "top": null,
+   "pick": true
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Lab",
+   "name": "BadBlood",
+   "url": "https://github.com/davidprowe/BadBlood",
+   "desc": "Fills a test Active Directory domain with realistic users, groups, computers and ACLs so there is something to attack.",
+   "q": "\"BadBlood\" \"active directory\"",
+   "comments": 0,
+   "stories": 0,
+   "se": 0,
+   "mentions": 0,
+   "years": {},
+   "allYears": [],
+   "top": null,
+   "pick": true
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Lab",
+   "name": "Ludus",
+   "url": "https://ludus.cloud",
+   "desc": "Deploys cybersecurity lab infrastructure on your own hardware; commonly used to stand up Active Directory ranges such as GOAD.",
+   "q": "\"ludus.cloud\"",
+   "comments": 0,
+   "stories": 0,
+   "se": 0,
+   "mentions": 0,
+   "years": {},
+   "allYears": [],
+   "top": null,
+   "pick": true
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Lab",
+   "name": "TryHackMe: Attacktive Directory",
+   "url": "https://tryhackme.com/room/attacktivedirectory",
+   "desc": "Guided room on enumerating and compromising a vulnerable domain controller.",
+   "q": "\"Attacktive Directory\"",
+   "comments": 0,
+   "stories": 0,
+   "se": 0,
+   "mentions": 0,
+   "years": {},
+   "allYears": [],
+   "top": null,
+   "pick": true
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Lab",
+   "name": "HTB Academy: Active Directory Enumeration & Attacks",
+   "url": "https://academy.hackthebox.com/course/preview/active-directory-enumeration--attacks",
+   "desc": "Hack The Box Academy's hands-on module on enumerating and attacking Active Directory.",
+   "q": "\"Active Directory Enumeration\" \"HTB Academy\"",
+   "comments": 0,
+   "stories": 0,
+   "se": 0,
+   "mentions": 0,
+   "years": {},
+   "allYears": [],
+   "top": null,
+   "pick": true
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Video",
+   "name": "Hacking Active Directory for Beginners (TCM Security)",
+   "url": "https://www.youtube.com/watch?v=VXxH4n684HE",
+   "desc": "Free five-hour course: build a lab, then LLMNR poisoning, SMB relay, pass-the-hash, Kerberoasting and golden tickets.",
+   "q": "\"Hacking Active Directory for Beginners\"",
+   "comments": 0,
+   "stories": 0,
+   "se": 0,
+   "mentions": 0,
+   "years": {},
+   "allYears": [],
+   "top": null,
+   "pick": true
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Video",
+   "name": "Attacking Kerberos: Kicking the Guard Dog of Hades",
+   "url": "https://www.youtube.com/watch?v=HHJWfG9b0-E",
+   "desc": "Tim Medin's Kerberoasting talk (BSides Orlando 2015 recording).",
+   "q": "\"Kicking the Guard Dog of Hades\"",
+   "comments": 0,
+   "stories": 0,
+   "se": 0,
+   "mentions": 0,
+   "years": {},
+   "allYears": [],
+   "top": null,
+   "pick": true
+  },
+  {
+   "cat": "Active Directory",
+   "type": "Video",
+   "name": "Red vs. Blue: Modern Active Directory Attacks, Detection, and Protection",
+   "url": "https://www.youtube.com/watch?v=b6GUXerE9Ac",
+   "desc": "Sean Metcalf's Black Hat USA 2015 briefing on AD attacks and how to detect and stop them.",
+   "q": "\"Modern Active Directory Attacks\"",
+   "comments": 0,
+   "stories": 0,
+   "se": 0,
+   "mentions": 0,
+   "years": {},
+   "allYears": [],
+   "top": null,
+   "pick": true
   }
  ]
 };

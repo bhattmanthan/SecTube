@@ -75,6 +75,16 @@ CANDIDATES = [
  (AD, "Lab", "GOAD (Game of Active Directory)", "https://github.com/Orange-Cyberdefense/GOAD", "Vulnerable multi-domain Active Directory lab you deploy yourself.", ['"Orange-Cyberdefense/GOAD"', '"Game of Active Directory"']),
  (AD, "Lab", "Vulnerable-AD", "https://github.com/safebuffer/vulnerable-AD", "Script that makes a test domain controller vulnerable to common AD attacks.", ['"vulnerable-AD"']),
  (AD, "Lab", "DetectionLab", "https://github.com/clong/DetectionLab", "Automated Windows domain lab pre-loaded with security tooling and logging (no longer maintained).", ['"DetectionLab"']),
+ (AD, "Lab", "Hack Smarter Labs", "https://www.hacksmarter.org/catalog", "Tyler Ramsbey's hands-on hacking labs, including free Active Directory challenge labs.", ['"hacksmarter"', '"Hack Smarter Labs"']),
+ (AD, "Lab", "BadBlood", "https://github.com/davidprowe/BadBlood", "Fills a test Active Directory domain with realistic users, groups, computers and ACLs so there is something to attack.", ['"BadBlood" "active directory"', '"davidprowe/BadBlood"']),
+ (AD, "Lab", "Ludus", "https://ludus.cloud", "Deploys cybersecurity lab infrastructure on your own hardware; commonly used to stand up Active Directory ranges such as GOAD.", ['"ludus.cloud"']),
+ (AD, "Lab", "Splunk Attack Range", "https://github.com/splunk/attack_range", "Builds an instrumented lab, including a Windows domain controller, for simulating attacks and developing detections.", ['"Splunk Attack Range"', '"splunk/attack_range"']),
+ (AD, "Lab", "TryHackMe: Attacktive Directory", "https://tryhackme.com/room/attacktivedirectory", "Guided room on enumerating and compromising a vulnerable domain controller.", ['"Attacktive Directory"', '"attacktivedirectory"']),
+ (AD, "Lab", "HTB Academy: Active Directory Enumeration & Attacks", "https://academy.hackthebox.com/course/preview/active-directory-enumeration--attacks", "Hack The Box Academy's hands-on module on enumerating and attacking Active Directory.", ['"Active Directory Enumeration" "HTB Academy"', '"active-directory-enumeration--attacks"']),
+ (AD, "Video", "Hacking Active Directory for Beginners (TCM Security)", "https://www.youtube.com/watch?v=VXxH4n684HE", "Free five-hour course: build a lab, then LLMNR poisoning, SMB relay, pass-the-hash, Kerberoasting and golden tickets.", ['"Hacking Active Directory for Beginners"', '"VXxH4n684HE"']),
+ (AD, "Video", "Attacking Kerberos: Kicking the Guard Dog of Hades", "https://www.youtube.com/watch?v=HHJWfG9b0-E", "Tim Medin's Kerberoasting talk (BSides Orlando 2015 recording).", ['"Kicking the Guard Dog of Hades"']),
+ (AD, "Video", "Six Degrees of Domain Admin (DEF CON 24)", "https://www.youtube.com/watch?v=wP8ZCczC1OU", "Andy Robbins, Rohan Vazarkar and Will Schroeder introduce BloodHound and attack-path analysis.", ['"Six Degrees of Domain Admin"']),
+ (AD, "Video", "Red vs. Blue: Modern Active Directory Attacks, Detection, and Protection", "https://www.youtube.com/watch?v=b6GUXerE9Ac", "Sean Metcalf's Black Hat USA 2015 briefing on AD attacks and how to detect and stop them.", ['"Modern Active Directory Attacks"']),
  (AD, "Reading", "Active Directory Security (adsecurity.org)", "https://adsecurity.org", "Sean Metcalf's blog on AD attacks and defences.", ['"adsecurity.org"']),
  (AD, "Reading", "Red Team Notes (ired.team)", "https://www.ired.team", "Notes on red teaming and Active Directory techniques.", ['"ired.team"']),
  (AD, "Reading", "The Hacker Recipes", "https://www.thehacker.recipes", "Guide to Active Directory and network attack techniques.", ['"thehacker.recipes"']),
@@ -200,6 +210,12 @@ NO_TOP = {"SecLists", "UC Berkeley CS 161: Computer Security", "Stanford CS 155:
           "IDA Pro / IDA Free", "radare2", "pwndbg", "mitmproxy", "hashcat", "MITRE ATT&CK", "vx-underground",
           "Security Engineering (Ross Anderson)", "CTFtime", "VulnHub", "PowerSploit / PowerView"}
 
+# Added on request even if they fall below the mention threshold; the site marks those as picks.
+PICKS = {"Hack Smarter Labs", "GOAD (Game of Active Directory)", "Vulnerable-AD", "BadBlood", "Ludus", "Splunk Attack Range",
+         "TryHackMe: Attacktive Directory", "HTB Academy: Active Directory Enumeration & Attacks",
+         "Hacking Active Directory for Beginners (TCM Security)", "Attacking Kerberos: Kicking the Guard Dog of Hades",
+         "Six Degrees of Domain Admin (DEF CON 24)", "Red vs. Blue: Modern Active Directory Attacks, Detection, and Protection"}
+
 def get(path, **params):
     base = path if path.startswith("https://") else f"https://hn.algolia.com/api/v1/{path}"
     url = base + "?" + urllib.parse.urlencode(params)
@@ -302,7 +318,9 @@ if __name__ == "__main__":
             print(f"{i+1}/{len(CANDIDATES)} {c[2]}: {out[-1]['mentions']} mentions ({out[-1]['se']} SE), {len(out[-1]['allYears'])} yrs", flush=True)
     finally:
         CACHE_F.write_text(json.dumps(CACHE))
-    keep = [r for r in out if r["mentions"] >= MIN_MENTIONS and len(r["allYears"]) >= MIN_YEARS]
+    assert PICKS <= set(names), PICKS - set(names)
+    for r in out: r["pick"] = not (r["mentions"] >= MIN_MENTIONS and len(r["allYears"]) >= MIN_YEARS)
+    keep = [r for r in out if not r["pick"] or r["name"] in PICKS]
     print("\nDROPPED (below threshold):")
     for r in out:
         if r not in keep: print(f"  {r['cat']}: {r['name']} ({r['mentions']} mentions, {len(r['allYears'])} yrs)")

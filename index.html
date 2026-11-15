@@ -28,6 +28,7 @@
   .rank { color:var(--dim); font: 14px ui-monospace, monospace; padding-top:2px; }
   .title { font-weight:600; font-size:16px; }
   .tag { font-size:11px; padding:1px 7px; border:1px solid var(--line); border-radius:999px; color:var(--dim); margin-left:6px; white-space:nowrap; }
+  .tag.pick { color: #d29922; border-color: #d29922; }
   .desc { margin:2px 0 4px; }
   .meta { color:var(--dim); font-size:13px; }
   .meta b { color:var(--acc); }
@@ -78,7 +79,7 @@ function bar(id, values, key) {
 }
 
 function spark(it) {
-  const max = Math.max(...Object.values(it.years));
+  const max = Math.max(1, ...Object.values(it.years));
   const box = el("div", { className: "spark", title: `HN mentions per year, 2010–${THIS_YEAR}` });
   for (let y = 2010; y <= THIS_YEAR; y++) {
     const n = it.years[y] || 0;
@@ -100,11 +101,12 @@ function render() {
     .sort((a, b) => by(b) - by(a));
   const list = document.getElementById("list");
   list.replaceChildren(...rows.map((it, i) => {
-    const ys = it.allYears;
+    const ys = it.allYears.length ? it.allYears : [0];
     const hn = "https://hn.algolia.com/?type=comment&query=" + encodeURIComponent(it.q);
     const meta = el("div", { className: "meta" },
       el("b", {}, it.mentions.toLocaleString()), " mentions",
-      ` (HN: ${it.comments.toLocaleString()} comments, ${it.stories.toLocaleString()} stories · Stack Exchange: ${it.se.toLocaleString()} posts) · ${ys.length} years, ${Math.min(...ys)}–${Math.max(...ys)} · `,
+      ` (HN: ${it.comments.toLocaleString()} comments, ${it.stories.toLocaleString()} stories · Stack Exchange: ${it.se.toLocaleString()} posts) · `
+        + (it.allYears.length ? `${ys.length} years, ${Math.min(...ys)}–${Math.max(...ys)} · ` : ""),
       el("a", { href: hn, target: "_blank", rel: "noopener" }, "HN"), " · ",
       el("a", { href: "https://security.stackexchange.com/search?q=" + encodeURIComponent(it.q), target: "_blank", rel: "noopener" }, "SE"));
     if (it.top && it.top.points)
@@ -115,7 +117,8 @@ function render() {
       el("span", { className: "rank" }, String(i + 1)),
       el("div", {},
         el("a", { className: "title", href: it.url, target: "_blank", rel: "noopener" }, it.name),
-        el("span", { className: "tag" }, it.type), state.cat === "All" ? el("span", { className: "tag" }, it.cat) : "",
+        el("span", { className: "tag" }, it.type),
+        it.pick ? el("span", { className: "tag pick", title: "Added by hand: below the mention threshold" }, "Pick, not ranked") : "", state.cat === "All" ? el("span", { className: "tag" }, it.cat) : "",
         el("div", { className: "desc" }, it.desc), meta),
       spark(it));
   }));
@@ -127,7 +130,7 @@ document.getElementById("q").oninput = e => { state.q = e.target.value; render()
 document.getElementById("sort").onchange = e => { state.sort = e.target.value; render(); };
 document.getElementById("foot").append(
   `How this is built: ${D.candidates} hand-picked candidates were searched on Hacker News (Algolia API) and on Stack Exchange (Information Security, plus Cryptography and Reverse Engineering for those domains) on ${D.generated}. `
-  + `A resource is listed only if it has at least ${D.minMentions} mentions spread over at least ${D.minYears} different years (${items.length} qualified). `
+  + `A resource is listed only if it has at least ${D.minMentions} mentions spread over at least ${D.minYears} different years (${items.filter(it => !it.pick).length} qualified). ${items.filter(it => it.pick).length} more are hand-added picks that fall below that bar and are labelled as such. `
   + `Counts are HN comments containing the resource's name or URL, HN stories with it in the title or URL, and Stack Exchange questions and answers containing it. A mention is not always a recommendation, `
   + `so every row links to the underlying posts. HN counts for very common names (over 1,000 hits) are lower bounds. The bar charts show HN only. Re-run mine.py to refresh.`);
 render();
